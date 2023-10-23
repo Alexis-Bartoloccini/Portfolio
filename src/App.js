@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Particle } from './components/particles/Particle';
+import { Home } from './components/home/Home';
+import { About } from './components/about/About';
+import { Contact } from './components/contact/Contact';
+import { Skills } from './components/skills/Skills';
+import { Porfolio } from './components/porfolio/Porfolio';
+import { Navbar } from './components/navbar/Navbar';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      
+       <div>
+          <Particle/>
+          <Navbar />
+          </div>
+        
+          
+          <div className="main-content">
+            
+            <section id="home">         <Home/>       </section>
+            <section id="about" >       <About/>      </section>
+            <section id="portfolio" >    <Porfolio/>   </section>
+            <section id="skills" >      <Skills/>     </section>
+            <section id="contact" >     <Contact/>    </section>
+          </div>
+       
+    </>
   );
 }
 
