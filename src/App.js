@@ -17,21 +17,18 @@ function App() {
   return (
     <>
       
-       <div>
+    
           <Particle/>
-          <Navbar />
-          </div>
-        
-          
-          <div className="main-content">
-            
+           
+         
+          <div >
+            <Navbar />
             <section id="home">         <Home/>       </section>
             <section id="about" >       <About/>      </section>
             <section id="portfolio" >    <Porfolio/>   </section>
             <section id="skills" >      <Skills/>     </section>
             <section id="contact" >     <Contact/>    </section>
           </div>
-       
     </>
   );
 }
